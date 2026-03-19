@@ -2,16 +2,22 @@ package sort;
 
 public class BubbleSort {
 
-    public static <T extends Number> T[] bubbleSort(T[] array){
+    public static Integer[] bubbleSort(Integer[] array){
 
         for(int i=0;i<array.length; i++){
-            for(int j=i+1; j<array.length; j++){
-                if(array[i].doubleValue() > array[j].doubleValue()){
-                    T aux = array[i];
-                    array[i] = array[j];
-                    array[j] = aux;
+            boolean swapped=false; 
+            
+            for(int j=0; j<array.length - (1 + i); j++){
+                if(array[j] > array[j+1]){
+                    int aux = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = aux;
+                    swapped=true;
                 }
+                System.out.println("Vetor Debug: " + java.util.Arrays.toString(array));
             }
+
+            if(!swapped) break;
         }
 
         return array;
