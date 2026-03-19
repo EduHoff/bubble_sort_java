@@ -5,6 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import sort.BubbleSort;
+import sort.SortResult;
 import utils.ConsoleUtils;
 
 public class Program {
@@ -75,8 +76,11 @@ public class Program {
 
         }
 
+        ConsoleUtils.clear();
         System.out.println("Vetor original: " + Arrays.toString(array));
-        System.out.println("Vetor ordenado: " + Arrays.toString(BubbleSort.bubbleSort(array)));
+        System.out.println();
+        SortResult result = BubbleSort.bubbleSort(array);
+        System.out.println(result.toString());
 
         sc.close();
     }
