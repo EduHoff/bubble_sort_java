@@ -13,6 +13,7 @@ docker compose run --rm bubble_sort_java
 ## Encerrar
 ```
 docker compose down
+```
 
 ## Integrantes do Grupo:
 - Danilo Odelon Wagner
